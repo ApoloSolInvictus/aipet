@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aiPet - El Futuro del Cuidado Animal</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -21,10 +21,6 @@
             scroll-snap-align: start;
             height: 100vh;
             position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
             background-size: cover;
             background-position: center;
         }
@@ -49,11 +45,13 @@
             background-color: #3457b1;
         }
         .cta-secondary {
-            background-color: rgba(23, 26, 32, 0.8);
+            background-color: rgba(248, 248, 248, 0.2);
             color: white;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
         }
         .cta-secondary:hover {
-            background-color: rgba(23, 26, 32, 1);
+            background-color: rgba(248, 248, 248, 0.4);
         }
         .fade-in-up {
             animation: fadeInUp 1s ease-out forwards;
@@ -76,19 +74,14 @@
     <!-- Header -->
     <header id="header" class="fixed top-0 left-0 right-0 z-50 text-gray-800">
         <nav class="container mx-auto px-12 py-4 flex justify-between items-center">
-            <!-- Logo -->
             <a href="#">
-                <img src="images/1.png" alt="aiPet Logo" class="h-8 md:h-10">
+                <img src="https://i.imgur.com/73245w8.png" alt="aiPet Logo" class="h-8 md:h-10">
             </a>
-
-            <!-- Desktop Navigation -->
             <div class="hidden lg:flex items-center space-x-6">
                 <a href="#section2" class="font-medium hover:text-blue-600">Juguetes</a>
                 <a href="#section3" class="font-medium hover:text-blue-600">Alimentación</a>
                 <a href="#section4" class="font-medium hover:text-blue-600">Accesorios</a>
             </div>
-
-            <!-- Right Icons/Links -->
             <div class="flex items-center space-x-6">
                 <a href="#gemini" class="hidden lg:block font-medium hover:text-blue-600">Asistente AI</a>
                 <a href="#" class="font-medium hover:text-blue-600">Tienda</a>
@@ -101,63 +94,76 @@
     <div id="snap-container" class="snap-container">
 
         <!-- Section 1: Hero -->
-        <section class="snap-section" style="background-image: url('https://images.unsplash.com/photo-1533738363-b7f9aef128ce?q=80&w=2070&auto=format&fit=crop');">
-            <div class="text-center pt-28 fade-in-up">
-                <h1 class="text-4xl md:text-5xl font-bold text-white">Inteligencia Natural</h1>
-                <p class="text-lg text-gray-200 mt-2">Productos ecológicos recomendados por IA para tu mascota.</p>
-            </div>
-            <div class="text-center pb-12 fade-in-up" style="animation-delay: 0.2s;">
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#section2" class="cta-button cta-primary font-medium py-3 px-16 rounded-md text-sm">Descubrir</a>
-                    <a href="#gemini" class="cta-button cta-secondary font-medium py-3 px-12 rounded-md text-sm">Pregúntale a Gemini</a>
+        <section class="snap-section" style="background-image: url('https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?q=80&w=1780&auto=format&fit=crop');">
+            <div class="container mx-auto px-12 h-full flex items-center justify-end">
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <div class="fade-in-up">
+                        <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">Inteligencia Natural.</h1>
+                        <p class="text-lg text-gray-200 mt-4">Productos ecológicos recomendados por IA para tu mascota.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
+                            <a href="#section2" class="cta-button cta-secondary font-medium py-3 px-12 rounded-md text-sm">Descubrir Colección</a>
+                        </div>
+                    </div>
                 </div>
-                 <a href="#section2" class="inline-block mt-8 text-white animate-bounce">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                </a>
             </div>
+            <a href="#section2" class="absolute bottom-10 left-1/2 -translate-x-1/2 inline-block text-white animate-bounce">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </a>
         </section>
 
         <!-- Section 2: Juguetes -->
-        <section id="section2" class="snap-section" style="background-image: url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1974&auto=format&fit=crop');">
-            <div class="text-center pt-28 fade-in-up">
-                <h1 class="text-4xl md:text-5xl font-bold text-white">Juguetes Sostenibles</h1>
-                <p class="text-lg text-gray-200 mt-2">Hechos con materiales reciclados para una diversión sin culpa.</p>
-            </div>
-            <div class="text-center pb-20 fade-in-up" style="animation-delay: 0.2s;">
-                 <a href="#" class="cta-button cta-primary font-medium py-3 px-16 rounded-md text-sm">Comprar Juguetes</a>
+        <section id="section2" class="snap-section" style="background-image: url('https://images.unsplash.com/photo-1607524941322-24b32d0335c4?q=80&w=1974&auto=format&fit=crop');">
+            <div class="container mx-auto px-12 h-full flex items-center justify-start">
+                 <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <div class="fade-in-up">
+                        <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">Juguetes Sostenibles.</h1>
+                        <p class="text-lg text-gray-200 mt-4">Hechos con materiales reciclados para una diversión sin culpa.</p>
+                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
+                            <a href="#" class="cta-button cta-secondary font-medium py-3 px-12 rounded-md text-sm">Comprar Juguetes</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Section 3: Alimentación -->
-        <section id="section3" class="snap-section" style="background-image: url('https://images.unsplash.com/photo-1589924694259-693122c050a7?q=80&w=1974&auto=format&fit=crop');">
-            <div class="text-center pt-28 fade-in-up">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Nutrición Orgánica</h1>
-                <p class="text-lg text-gray-600 mt-2">Ingredientes puros para una salud óptima.</p>
-            </div>
-            <div class="text-center pb-20 fade-in-up" style="animation-delay: 0.2s;">
-                 <a href="#" class="cta-button cta-primary font-medium py-3 px-16 rounded-md text-sm">Ver Alimentos</a>
+        <section id="section3" class="snap-section" style="background-image: url('https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?q=80&w=1958&auto=format&fit=crop');">
+            <div class="container mx-auto px-12 h-full flex items-center justify-end">
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <div class="fade-in-up">
+                        <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight">Nutrición Orgánica.</h1>
+                        <p class="text-lg text-gray-600 mt-4">Ingredientes puros para una salud óptima y un futuro verde.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
+                            <a href="#" class="cta-button cta-primary font-medium py-3 px-12 rounded-md text-sm">Ver Alimentos</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Section 4: Accesorios -->
-        <section id="section4" class="snap-section" style="background-image: url('https://images.unsplash.com/photo-1548681528-6a5c45b66b42?q=80&w=1974&auto=format&fit=crop');">
-             <div class="text-center pt-28 fade-in-up">
-                <h1 class="text-4xl md:text-5xl font-bold text-white">Accesorios con Estilo</h1>
-                <p class="text-lg text-gray-200 mt-2">Diseño y sostenibilidad en cada detalle.</p>
-            </div>
-            <div class="text-center pb-20 fade-in-up" style="animation-delay: 0.2s;">
-                 <a href="#" class="cta-button cta-primary font-medium py-3 px-16 rounded-md text-sm">Explorar Accesorios</a>
+        <section id="section4" class="snap-section" style="background-image: url('https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?q=80&w=1974&auto=format&fit=crop');">
+            <div class="container mx-auto px-12 h-full flex items-center justify-start">
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <div class="fade-in-up">
+                        <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">Accesorios con Estilo.</h1>
+                        <p class="text-lg text-gray-200 mt-4">Diseño y sostenibilidad en cada detalle que tu mascota usa.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
+                            <a href="#" class="cta-button cta-secondary font-medium py-3 px-12 rounded-md text-sm">Explorar Accesorios</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Section 5: AI Assistant -->
-        <section id="gemini" class="snap-section bg-[#171a20] text-white">
-            <div class="text-center pt-28 fade-in-up">
+        <section id="gemini" class="snap-section bg-[#171a20] text-white flex flex-col justify-center items-center">
+            <div class="text-center fade-in-up">
                 <h1 class="text-4xl md:text-5xl font-bold">Asistente aiPet</h1>
                 <p class="text-lg text-gray-400 mt-2">Tu experto personal Gemini está listo para ayudarte.</p>
             </div>
             
-            <div class="w-full max-w-2xl mx-auto px-4 fade-in-up" style="animation-delay: 0.2s;">
+            <div class="w-full max-w-2xl mx-auto px-4 mt-8 fade-in-up" style="animation-delay: 0.2s;">
                 <div class="bg-gray-800 rounded-lg p-6">
                     <p class="text-gray-300 text-center mb-4">Pregúntame cualquier cosa sobre tu mascota para encontrar el producto ideal. <br> Ej: "Mi gato tiene sobrepeso, ¿qué snack orgánico es mejor para él?"</p>
                     <textarea class="w-full bg-gray-700 text-white rounded-md p-3 h-24 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none" placeholder="Escribe tu consulta..."></textarea>
@@ -165,7 +171,7 @@
                 </div>
             </div>
 
-            <footer class="w-full text-center pb-8 text-gray-500 text-xs">
+            <footer class="absolute bottom-0 w-full text-center pb-8 text-gray-500 text-xs">
                 <div class="space-x-4">
                     <a href="#" class="hover:text-white">aiPet © 2024</a>
                     <a href="#" class="hover:text-white">Privacidad y Legal</a>
@@ -181,7 +187,6 @@
 
         if (snapContainer) {
             snapContainer.addEventListener('scroll', () => {
-                // Change header style after scrolling past the first 100 pixels
                 if (snapContainer.scrollTop > 50) {
                     header.classList.add('header-scrolled');
                 } else {
