@@ -6,6 +6,20 @@
     <title>aiPet - El Futuro del Cuidado Animal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script>
+        // Custom Tailwind CSS Configuration
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'brand-yellow': '#FDE047', // Amarillo Pollito
+                'brand-blue': '#3B82F6',   // Azul Primario
+                'brand-red': '#EF4444',    // Rojo Primario
+              }
+            }
+          }
+        }
+    </script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -31,26 +45,18 @@
             background-color: rgba(255, 255, 255, 0.9) !important;
             backdrop-filter: blur(10px);
             --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
             box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
         }
         .cta-button {
             transition: all 0.3s ease;
         }
-        .cta-primary {
-            background-color: #3e6ae1;
-            color: white;
-        }
-        .cta-primary:hover {
-            background-color: #3457b1;
-        }
-        .cta-secondary {
+        .cta-glass {
             background-color: rgba(248, 248, 248, 0.2);
             color: white;
             backdrop-filter: blur(5px);
             border: 1px solid rgba(255, 255, 255, 0.5);
         }
-        .cta-secondary:hover {
+        .cta-glass:hover {
             background-color: rgba(248, 248, 248, 0.4);
         }
         .fade-in-up {
@@ -74,13 +80,14 @@
     <!-- Header -->
     <header id="header" class="fixed top-0 left-0 right-0 z-50 text-gray-800">
         <nav class="container mx-auto px-12 py-4 flex justify-between items-center">
-            <a href="#">
+            <a href="index.html">
                 <img src="images/1.png" alt="aiPet Logo" class="h-8 md:h-10">
             </a>
             <div class="hidden lg:flex items-center space-x-6">
                 <a href="#section2" class="font-medium hover:text-blue-600">Juguetes</a>
                 <a href="#section3" class="font-medium hover:text-blue-600">Alimentación</a>
                 <a href="#section4" class="font-medium hover:text-blue-600">Accesorios</a>
+                <a href="nosotros.html" class="font-medium hover:text-blue-600">Nosotros</a>
             </div>
             <div class="flex items-center space-x-6">
                 <a href="#gemini" class="hidden lg:block font-medium hover:text-blue-600">Asistente AI</a>
@@ -98,10 +105,10 @@
             <div class="container mx-auto px-12 h-full flex items-center justify-end">
                 <div class="w-full lg:w-1/2 text-center lg:text-left">
                     <div class="fade-in-up">
-                        <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">Inteligencia Natural.</h1>
+                        <h1 class="text-4xl md:text-6xl font-extrabold text-brand-yellow leading-tight">Inteligencia Natural.</h1>
                         <p class="text-lg text-gray-200 mt-4">Productos ecológicos recomendados por IA para tu mascota.</p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
-                            <a href="#section2" class="cta-button cta-secondary font-medium py-3 px-12 rounded-md text-sm">Descubrir Colección</a>
+                            <a href="#section2" class="cta-button cta-glass font-medium py-3 px-12 rounded-md text-sm">Descubrir Colección</a>
                         </div>
                     </div>
                 </div>
@@ -119,7 +126,7 @@
                         <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">Juguetes Sostenibles.</h1>
                         <p class="text-lg text-gray-200 mt-4">Hechos con materiales reciclados para una diversión sin culpa.</p>
                          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
-                            <a href="#" class="cta-button cta-secondary font-medium py-3 px-12 rounded-md text-sm">Comprar Juguetes</a>
+                            <a href="#" class="cta-button bg-brand-blue hover:bg-blue-700 text-white font-medium py-3 px-12 rounded-md text-sm">Comprar Juguetes</a>
                         </div>
                     </div>
                 </div>
@@ -131,10 +138,10 @@
             <div class="container mx-auto px-12 h-full flex items-center justify-end">
                 <div class="w-full lg:w-1/2 text-center lg:text-left">
                     <div class="fade-in-up">
-                        <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight">Nutrición Orgánica.</h1>
+                        <h1 class="text-4xl md:text-6xl font-extrabold text-brand-red leading-tight">Nutrición Orgánica.</h1>
                         <p class="text-lg text-gray-600 mt-4">Ingredientes puros para una salud óptima y un futuro verde.</p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
-                            <a href="#" class="cta-button cta-primary font-medium py-3 px-12 rounded-md text-sm">Ver Alimentos</a>
+                            <a href="#" class="cta-button bg-brand-red hover:bg-red-700 text-white font-medium py-3 px-12 rounded-md text-sm">Ver Alimentos</a>
                         </div>
                     </div>
                 </div>
@@ -146,10 +153,10 @@
             <div class="container mx-auto px-12 h-full flex items-center justify-start">
                 <div class="w-full lg:w-1/2 text-center lg:text-left">
                     <div class="fade-in-up">
-                        <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">Accesorios con Estilo.</h1>
+                        <h1 class="text-4xl md:text-6xl font-extrabold text-brand-yellow leading-tight">Accesorios con Estilo.</h1>
                         <p class="text-lg text-gray-200 mt-4">Diseño y sostenibilidad en cada detalle que tu mascota usa.</p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
-                            <a href="#" class="cta-button cta-secondary font-medium py-3 px-12 rounded-md text-sm">Explorar Accesorios</a>
+                            <a href="#" class="cta-button bg-brand-yellow hover:bg-yellow-500 text-gray-800 font-medium py-3 px-12 rounded-md text-sm">Explorar Accesorios</a>
                         </div>
                     </div>
                 </div>
@@ -167,7 +174,7 @@
                 <div class="bg-gray-800 rounded-lg p-6">
                     <p class="text-gray-300 text-center mb-4">Pregúntame cualquier cosa sobre tu mascota para encontrar el producto ideal. <br> Ej: "Mi gato tiene sobrepeso, ¿qué snack orgánico es mejor para él?"</p>
                     <textarea class="w-full bg-gray-700 text-white rounded-md p-3 h-24 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none" placeholder="Escribe tu consulta..."></textarea>
-                    <button class="w-full cta-button cta-primary font-medium py-3 mt-4 rounded-md text-sm">Obtener recomendación</button>
+                    <button class="w-full cta-button bg-brand-blue hover:bg-blue-700 text-white font-medium py-3 mt-4 rounded-md text-sm">Obtener recomendación</button>
                 </div>
             </div>
 
@@ -197,5 +204,4 @@
     </script>
 </body>
 </html>
-
 
